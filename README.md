@@ -143,4 +143,4 @@ Get a free key at: https://aistudio.google.com/apikey
 
 ## 👤 Author
 
-**Nikita Mkoli** — [github.com/nikitamkoli21-ship-it](https://github.com/nikitamkoli21-ship-it)
+**Nikita koli** — [github.com/nikitamkoli21-ship-it](https://github.com/nikitamkoli21-ship-it)
