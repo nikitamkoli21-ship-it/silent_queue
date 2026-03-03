@@ -1,0 +1,112 @@
+/* components/HistoryTable.css */
+
+.history-panel {
+  padding: 1.75rem;
+  animation: fadeSlideUp 0.5s ease 0.4s both;
+}
+
+.history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.history-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.history-count {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  background: var(--bg-input);
+  border: 1px solid var(--border-subtle);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.history-empty {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  padding: 2.5rem;
+  border: 1px dashed var(--border-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.history-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+
+.history-table thead tr {
+  background: var(--bg-input);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.history-table th {
+  padding: 10px 14px;
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.history-table td {
+  padding: 9px 14px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+.history-table tr:last-child td { border-bottom: none; }
+
+.history-table tbody tr {
+  transition: background var(--transition-fast);
+  animation: fadeIn 0.3s ease;
+}
+.history-table tbody tr:hover {
+  background: var(--bg-input);
+}
+
+.td-time {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.td-num {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.congestion-badge {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 20px;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.congestion-badge--Low    { background: rgba(16,217,140,0.12); color: var(--green);  border: 1px solid rgba(16,217,140,0.25); }
+.congestion-badge--Medium { background: rgba(245,158,11,0.12); color: var(--orange); border: 1px solid rgba(245,158,11,0.25); }
+.congestion-badge--High   { background: rgba(244,63,94,0.12);  color: var(--red);    border: 1px solid rgba(244,63,94,0.25);  }
+
+.staff-col { color: var(--accent-emerald); font-weight: 600; }

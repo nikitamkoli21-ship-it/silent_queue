@@ -1,0 +1,74 @@
+/* components/InsightsPanel - CSS */
+.insights-panel {
+  padding: 1.75rem;
+  animation: fadeSlideUp 0.5s ease 0.35s both;
+}
+
+.insights-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.insight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  animation: fadeSlideUp 0.35s ease;
+  transition: all var(--transition-fast);
+}
+.insight-item:hover { transform: translateX(4px); }
+
+.insight-item--critical {
+  background: rgba(244, 63, 94, 0.07);
+  border-color: rgba(244, 63, 94, 0.2);
+}
+.insight-item--warning {
+  background: rgba(245, 158, 11, 0.07);
+  border-color: rgba(245, 158, 11, 0.2);
+}
+.insight-item--moderate {
+  background: rgba(245, 158, 11, 0.05);
+  border-color: rgba(245, 158, 11, 0.15);
+}
+.insight-item--good {
+  background: rgba(16, 217, 140, 0.06);
+  border-color: rgba(16, 217, 140, 0.18);
+}
+.insight-item--info {
+  background: var(--bg-input);
+  border-color: var(--border-subtle);
+}
+
+.insight-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.insight-text {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.insights-empty {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  padding: 2rem;
+  border: 1px dashed var(--border-subtle);
+  border-radius: var(--radius-sm);
+}

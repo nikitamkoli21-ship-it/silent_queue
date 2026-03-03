@@ -1,0 +1,111 @@
+/* =============================================
+   SILENT QUEUE — GLOBAL STYLES
+   Aesthetic: Obsidian Terminal meets Soft Neon
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+:root {
+  /* Dark Theme */
+  --bg-primary: #080b12;
+  --bg-secondary: #0d1117;
+  --bg-card: rgba(255,255,255,0.03);
+  --bg-card-hover: rgba(255,255,255,0.055);
+  --border: rgba(255,255,255,0.07);
+  --border-bright: rgba(255,255,255,0.14);
+
+  --text-primary: #e8eaf0;
+  --text-secondary: #7a8299;
+  --text-muted: #454d66;
+
+  --accent-cyan: #00e5ff;
+  --accent-violet: #9b6dff;
+  --accent-green: #00ff88;
+  --accent-orange: #ff9c40;
+  --accent-red: #ff4571;
+
+  --glow-cyan: 0 0 24px rgba(0,229,255,0.22);
+  --glow-violet: 0 0 24px rgba(155,109,255,0.22);
+  --glow-green: 0 0 24px rgba(0,255,136,0.22);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
+  --transition-slow: 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+[data-theme="light"] {
+  --bg-primary: #f0f2f8;
+  --bg-secondary: #e6e9f4;
+  --bg-card: rgba(255,255,255,0.7);
+  --bg-card-hover: rgba(255,255,255,0.9);
+  --border: rgba(0,0,0,0.07);
+  --border-bright: rgba(0,0,0,0.14);
+
+  --text-primary: #0d1117;
+  --text-secondary: #4a5168;
+  --text-muted: #9aa0b8;
+
+  --glow-cyan: 0 4px 20px rgba(0,180,220,0.15);
+  --glow-violet: 0 4px 20px rgba(120,80,220,0.15);
+  --glow-green: 0 4px 20px rgba(0,180,100,0.15);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--font-display);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background var(--transition-slow), color var(--transition-slow);
+}
+
+/* Animated background grid */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,229,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,229,255,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="light"] body::before {
+  background-image:
+    linear-gradient(rgba(0,100,200,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,100,200,0.04) 1px, transparent 1px);
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 99px; }
+
+/* Input reset */
+input, select, textarea {
+  font-family: var(--font-mono);
+  outline: none;
+}
